@@ -1,0 +1,84 @@
+html, body{
+    margin: 10px;
+    margin-top: 50px;
+    background-color: #6e777d;
+}
+
+.name-title{
+    height: 50px;
+    text-align: center;
+}
+
+.option{
+    height: 80px;
+    min-width: 100px;
+    color: white;
+    background-color: black;
+    border: 6px double;
+}
+
+.option:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+.option:active{
+    color: green;
+}
+
+#title-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #394045;
+    color: #101315;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #394045;
+    color: #101315;
+}
+
+#scene{
+    height: 400px;
+}
+
+#center{
+    background-image: url('https://i.pinimg.com/736x/76/e0/fd/76e0fd3ef836d99e3e6ec4a4fa7b7b02.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#text-box{
+    height: 100px;
+}
+
+#Kanata{
+    background-color: lightblue;
+}
+#Kanata .name-title{
+    background-color: darkblue;
+    color: white
+}
+
+#Ryhes{
+    background-color: darkgreen;
+}
+
+#Ryhes .name-title{
+    background-color: #002500;
+    color: white
+}
+
+#menu-card{
+    height: 150px;
+    background-color: black;
+    border: 6px double white;
+}
