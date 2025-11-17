@@ -2,7 +2,13 @@
     "paths":[
         {
             "title": "opener",
-            "text-box": "Opening Text"
+            "textBox": [
+                "Kanata was once a commander in his home's military and fought in a war many years ago.", 
+                "During this war, he fought a man named Rhyes, a commander for the other side. Kanata won against him in a duel, leaving him the only one standing."
+            ],
+            "options": [
+                "Continue"
+            ]
         }
     ]
 }
