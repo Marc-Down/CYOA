@@ -1,6 +1,7 @@
 {
     "paths":[
         {
+            "index": 0,
             "title": "Opener",
             "textBox": [
                 "Kanata was once a commander in his home's military and fought in a war many years ago.", 
@@ -11,21 +12,73 @@
             "options": [
                 {
                     "text": "Continue",
-                    "next": 1
+                    "index": 0,
+                    "next": 1,
+                    "timer": 0
                 }
             ]
         },
         {
+            "index": 1,
             "title": "Begin",
             "textBox": [
                 "Kanata moved around his small village home, making breakfast, cleaning up a bit, the basic morning tasks",
                 "As he did this, he could see Rhyes move in and out of his vision as he looked around Kanata's home",
-                "He seems to always be interested in the devices and knick knacks Kanata had around his kitchen and often asks queations about them"
+                "He seems to always be interested in the devices and knick knacks Kanata had around his kitchen and often asks queations about them",
+                "\"Hey!\" He calls out to get Kanata's attention, \"What's this?\"",
+                "Kanata looked over and saw that Rhyes' was pointing a small scuplture of a cat on a shelf",
+                "Does he answer Rhyes?"
             ],
             "options": [
                 {
                     "text": "Continue",
-                    "next": 2
+                    "index": 0,
+                    "timer": 0,
+                    "leave": 5
+                },
+                {
+                    "text": "Answer",
+                    "index": 1,
+                    "next": 2,
+                    "timer": 5
+                },
+                {
+                    "text": "Ignore",
+                    "index": 2,
+                    "next": 3,
+                    "timer": 5
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "title": "Answer",
+            "textBox": [
+                "\"It's a sculpture one of my soldiers made during our down time.\"",
+                "The ghost jumped at the sound of Kanata's voice, having not expected an answer.",
+                "He smiled and continued his idle chatter and asking more quetions, not caring if he got an answer or not.",
+                "During this, Kanata cought a mention of wanting to go to the forest nearby. Something about animals and plants",
+                "Do you go to forest as the ghost wants?"
+            ],
+            "options": [
+                {
+                    "text": "Continue",
+                    "timer": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "title": "Ignore",
+            "textBox": [
+                "The ghost isn't surprised by your silence and continues looking around the kitchen.",
+                "He does ask about other things on the shelves but you don't answer him.",
+                "Do you wish to go to the woods or to the market?"
+            ],
+            "options": [
+                {
+                    "text": "Continue",
+                    "timer": 0
                 }
             ]
         }

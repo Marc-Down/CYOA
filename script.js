@@ -19,14 +19,8 @@ getPaths().then(paths => {
 function main(data) {
     title.innerText = data.paths[pathIndex].title;
     textBoxText.innerText = data.paths[pathIndex].textBox[textIndex];
-    menu.innerHTML = makeOptions(data.paths[pathIndex].options);
-
+    makeButtons(data);
     console.log(data.paths[0].options.length);
-    for(let i = 0; i < data.paths[0].options.length; i++){
-        option[i].classList.remove("hidden");
-    }
-
-    buttonClick(data);
 }
 
 function buttonClick(data){
@@ -49,6 +43,9 @@ function changeText(data){
 }
 
 function changePath(data, button){
+    console.log(`path index: ${pathIndex}`);
+    console.log(`button: ${button}`);
+    console.log(data.paths[pathIndex].options[button].next)
     pathIndex = data.paths[pathIndex].options[button].next;
     if(pathIndex > data.paths.length-1){
         alert(`That's as much as written`);
@@ -56,14 +53,15 @@ function changePath(data, button){
     }
     console.log(`path index: ${pathIndex}`);
     console.log(`path title: ${data.paths[pathIndex].title}`)
-    console.log(`button: ${button}`);
     textIndex = 0;
     changeTitle(data);
+    makeButtons(data);
     fillTextBox(data);
 }
 
 function fillTextBox(data){
-    textBoxText.innerText = data.paths[pathIndex].textBox[textIndex]
+    textBoxText.innerText = data.paths[pathIndex].textBox[textIndex];
+    makeButtons(data);
 }
 
 function changeTitle(data){
@@ -73,14 +71,30 @@ function changeTitle(data){
 function makeOptions(options){
     let markup = "";
     for(o of options){
-        markup += `
+        if(textIndex === o.timer && o.timer != 0){
+            console.log(o);
+            markup += `
             <div class="col px-2 d-flex align-items-center justify-content-center">
-                <div class="option hidden card p-2 rounded-0 justify-content-center">
-                    <p class="m-0 text-center">${o.text}</p>
-                </div>
+            <div class="option card p-2 rounded-0 justify-content-center">
+            <p class="m-0 text-center">${o.text}</p>
             </div>
-            `
+            </div>
+            `        
+            console.log(markup);
+        }else if(o.timer === 0 && o.leave != textIndex){
+            markup += `
+                <div class="col px-2 d-flex align-items-center justify-content-center">
+                    <div class="option card p-2 rounded-0 justify-content-center">
+                        <p class="m-0 text-center">${o.text}</p>
+                    </div>
+                </div>
+                `
+        }
     };
-    console.log(markup);
     return markup;
+}
+
+function makeButtons(data){
+    menu.innerHTML = makeOptions(data.paths[pathIndex].options);
+    buttonClick(data);
 }
