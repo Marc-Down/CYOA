@@ -26,13 +26,13 @@ function main(data) {
 function buttonClick(data){
     for(let i = 0; i < option.length; i++){
         option[i].addEventListener("click", function(){
+            console.log(`i: ${i}`)
+            console.log(`i index: ${data.paths[pathIndex].options[i].index}`);
             if(data.paths[pathIndex].textBox.length-1 === textIndex){
                 changePath(data, i)
             }else{
                 changeText(data);
             }
-            console.log(`length: ${data.paths[pathIndex].textBox.length-1}`);
-            console.log(`text index: ${textIndex}`);
         })
     }
 }
@@ -45,7 +45,7 @@ function changeText(data){
 function changePath(data, button){
     console.log(`path index: ${pathIndex}`);
     console.log(`button: ${button}`);
-    console.log(data.paths[pathIndex].options[button].next)
+    console.log(`next: ${data.paths[pathIndex].options[button].next}`)
     pathIndex = data.paths[pathIndex].options[button].next;
     if(pathIndex > data.paths.length-1){
         alert(`That's as much as written`);
@@ -80,7 +80,6 @@ function makeOptions(options){
             </div>
             </div>
             `        
-            console.log(markup);
         }else if(o.timer === 0 && o.leave != textIndex){
             markup += `
                 <div class="col px-2 d-flex align-items-center justify-content-center">
