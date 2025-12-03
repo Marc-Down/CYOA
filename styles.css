@@ -93,6 +93,14 @@ html, body{
 
 #Ryhes{
     background-color: darkgreen;
+    background-image: url(Ryhes_Temp.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#Ryhes.open{
+    background-image: url(Ryhes_Open_Temp.png);
 }
 
 #Ryhes .name-title{

@@ -3,7 +3,7 @@ const option = document.getElementsByClassName("option");
 const title = document.getElementById("title");
 const menu = document.getElementById("menu-row");
 const kanata = document.getElementById("Kanata");
-const Ryhes = document.getElementById("Ryhes");
+const ryhes = document.getElementById("Ryhes");
 let textIndex = 0;
 let pathIndex = 0;
 
@@ -28,7 +28,6 @@ function main(data) {
 function buttonClick(data){
     for(let i = 0; i < option.length; i++){
         option[i].addEventListener("click", function(){
-            console.log(option[i].getAttribute('id'));
             if(data.paths[pathIndex].textBox.length-1 === textIndex){
                 changePath(data, option[i].getAttribute('id'))
             }else{
@@ -44,8 +43,6 @@ function changeText(data){
 }
 
 function changePath(data, button){
-    console.log(`path index: ${pathIndex}`);
-    console.log(`button: ${button}`);
     if(button === null){
         console.log(`next: ${data.paths[pathIndex].options[0].next}`);
         pathIndex = data.paths[pathIndex].options[0].next;
@@ -68,11 +65,15 @@ function changePath(data, button){
 function fillTextBox(data){
     let textBox = data.paths[pathIndex].textBox[textIndex];
     textBoxText.innerHTML = textBox.text;
-    console.log(textBox.kanataMouth);
     if(textBox.kanataMouth === 'open'){
         kanata.classList.add("open");
     }else if(textBox.kanataMouth === 'close'){
         kanata.classList.remove("open");
+    }
+    if(textBox.ryhesMouth === 'open'){
+        ryhes.classList.add("open");
+    }else if(textBox.ryhesMouth === 'close'){
+        ryhes.classList.remove("open");
     }
     makeButtons(data);
 }
@@ -85,7 +86,6 @@ function makeOptions(options){
     let markup = "";
     for(o of options){
         if(textIndex === o.timer && o.timer != 0){
-            console.log(o);
             markup += `
             <div id="${o.index}" class="option card p-2 rounded-0 justify-content-center">
                     <p class="m-0 text-center">${o.text}</p>
@@ -93,7 +93,6 @@ function makeOptions(options){
             </div>
             `        
         }else if(o.timer === 0 && o.leave != textIndex){
-            console.log(o);
             markup += `
                 <div id="${o.index}" class="col px-2 d-flex align-items-center justify-content-center">
                     <div class="option card p-2 rounded-0 justify-content-center">

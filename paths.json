@@ -7,22 +7,22 @@
                 {
                     "text": "Kanata was once a commander in his home's military and fought in a war many years ago.",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 }, 
                 {
                     "text": "During this war, he fought a man named Rhyes, a commander for the other side. Kanata won against him in a duel, leaving him the only one standing.",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 },
                 {
                     "text": "When he returned, he started seeing Rhyes around him. He were being haunted by him, and Rhyes is not a quiet man.",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 },
                 {
                     "text":"In the years since, he has grown acustomed to Rhyes'...company and lack of 'off switch' but Kanata has never responded to him.",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 }
             ],
             "options": [
@@ -41,32 +41,32 @@
                 {
                     "text": "Kanata moved around his small village home, making breakfast, cleaning up a bit, the basic morning tasks",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 },
                 {
                     "text": "As he did this, he could see Rhyes move in and out of his vision as he looked around Kanata's home",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 },
                 {
                     "text": "He seems to always be interested in the devices and knick knacks Kanata had around his kitchen and often asks queations about them",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 },
                 {
                     "text": "<span class=\"ryhes-text\">\"Hey!\"</span> He calls out to get Kanata's attention, <span class=\"ryhes-text\">\"What's this?\"</span>",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "open"
+                    "ryhesMouth": "open"
                 },
                 {
                     "text": "Kanata looked over and saw that Rhyes' was pointing a small scuplture of a cat on a shelf",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 },
                 {
                     "text": "Does he answer Rhyes?",
                     "kanataMouth": "close",
-                    "ryhesMouth:": "close"
+                    "ryhesMouth": "close"
                 }
             ],
             "options": [
@@ -99,10 +99,26 @@
                     "kanataMouth": "open",
                     "ryhesMouth": "close"
                 },
-                "The ghost jumped at the sound of Kanata's voice, having not expected an answer.",
-                "He smiled and continued his idle chatter and asking more quetions, not caring if he got an answer or not.",
-                "During this, Kanata cought a mention of wanting to go to the forest nearby. Something about animals and plants",
-                "Do you go to forest as the ghost wants?"
+                {
+                    "text": "The ghost jumped at the sound of Kanata's voice, having not expected an answer.",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                },
+                {
+                    "text": "He smiled and continued his idle chatter and asking more quetions, not caring if he got an answer or not.",
+                    "kanataMouth":"close",
+                    "ryhesMouth":"close"
+                },
+                {
+                    "text": "During this, Kanata cought a mention of wanting to go to the forest nearby. Something about animals and plants",
+                    "kanataMouth":"close",
+                    "ryhesMouth":"close"
+                },
+                {
+                    "text": "Does he go to forest as the ghost wants?",
+                    "kanataMouth":"close",
+                    "ryhesMouth":"close"
+                }
             ],
             "options": [
                 {
@@ -129,14 +145,40 @@
             "index": 3,
             "title": "Ignore",
             "textBox": [
-                "The ghost isn't surprised by your silence and continues looking around the kitchen.",
-                "He does ask about other things on the shelves but you don't answer him.",
-                "Do you wish to go to the woods or to the market?"
+                {
+                    "text": "The ghost isn't surprised by his silence and continues looking around the kitchen.",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                },
+                {
+                    "text": "He does ask about other things on the shelves but Kanata don't answer him.",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                },
+                {
+                    "text": "Does Kanata go to the forest for a walk or to the market for food?",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                }
             ],
             "options": [
                 {
                     "text": "Continue",
-                    "timer": 0
+                    "index": 0,
+                    "timer": 0,
+                    "leave": 2
+                },
+                {
+                    "text": "Forest",
+                    "index": 1,
+                    "timer": 2,
+                    "next": 4
+                },
+                {
+                    "text": "Market",
+                    "index": 2,
+                    "timer": 2,
+                    "next": 5
                 }
             ]
         },
@@ -144,8 +186,16 @@
             "index": 4,
             "title": "Forest",
             "textBox": [
-                "You grab your coat from next to the door and leave towards the forest.",
-                "Rhyes smiles at you and you notice that he seems to bounce as he 'walks' with you."
+                {
+                    "text": "He grabs his coat from next to the door and leave towards the forest.",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                },
+                {
+                    "text": "Rhyes smiles at him, and Kanata notices that the ghost seems to bounce as he 'walks' with him.",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                }
             ],
             "options": [
                 {
@@ -153,6 +203,18 @@
                     "index": 0,
                     "timer": 0
                 }
+            ]
+        },
+        {
+            "index": 5,
+            "title": "Uh Oh!",
+            "textBox": [
+                {
+                    "text": "You've found a hole!"
+                }
+            ],
+            "options": [
+                
             ]
         }
     ]
