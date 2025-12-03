@@ -195,13 +195,46 @@
                     "text": "Rhyes smiles at him, and Kanata notices that the ghost seems to bounce as he 'walks' with him.",
                     "kanataMouth": "close",
                     "ryhesMouth": "close"
+                },
+                {
+                    "text": "The ghost moves along the trail in a zig-zag manner, looking at the different plants along the forest floor.",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                },
+                {
+                    "text": "Suddently, he grabs Kanata by the hand and pulls him over to a small plant with tall yellow-ish green stalks.",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
+                },
+                {
+                    "text": "<span class=\"ryhes-text\">\"Look, this one helps with inflamation around things like stings and bites.\"</span> He points at the leaves around the bottom of the plant, <span class=\"ryhes-text\">\"What do you call it&mdash;if you know?\"</span>",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "open"
+                },
+                {
+                    "text": "Does Kanata answer?",
+                    "kanataMouth": "close",
+                    "ryhesMouth": "close"
                 }
             ],
             "options": [
                 {
                     "text": "Continue",
                     "index": 0,
-                    "timer": 0
+                    "timer": 0,
+                    "leave": 5
+                },
+                {
+                    "text": "It's Plantain",
+                    "index": 1,
+                    "timer": 5,
+                    "next": 5
+                },
+                {
+                    "text": "Ignore",
+                    "index": 2,
+                    "timer": 5,
+                    "next": 5
                 }
             ]
         },
@@ -214,7 +247,7 @@
                 }
             ],
             "options": [
-                
+
             ]
         }
     ]
