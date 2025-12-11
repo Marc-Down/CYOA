@@ -65,24 +65,8 @@ function changePath(data, button){
 function fillTextBox(data){
     let textBox = data.paths[pathIndex].textBox[textIndex];
     textBoxText.innerHTML = textBox.text;
-    kanata.classList.remove('open');
-    kanata.classList.remove('right');
-    if(textBox.kanataImg === 'center-open'){
-        kanata.classList.add("open");
-    }else if(textBox.kanataImg === 'center-close'){
-        kanata.classList.remove("open");
-    }else if(textBox.kanataImg === 'right-open'){
-        kanata.classList.add("right");
-        kanata.classList.add("open");
-    }else if(textBox.kanataImg === 'right-close'){
-        kanata.classList.add('right');
-    }
-
-    if(textBox.ryhesImg === 'open'){
-        ryhes.classList.add("open");
-    }else if(textBox.ryhesImg === 'close'){
-        ryhes.classList.remove("open");
-    }
+    changeKanata(textBox.kanataImg);
+    changeRyhes(textBox.ryhesImg);
     makeButtons(data);
 }
 
@@ -95,8 +79,10 @@ function makeOptions(options){
     for(o of options){
         if(textIndex === o.timer && o.timer != 0){
             markup += `
-            <div id="${o.index}" class="option card p-2 rounded-0 justify-content-center">
-                    <p class="m-0 text-center">${o.text}</p>
+            <div class="col px-2 d-flex align-items-center justify-content-center">
+                <div id="${o.index}" class="option card p-2 rounded-0 justify-content-center">
+                        <p class="m-0 text-center">${o.text}</p>
+                    </div>
                 </div>
             </div>
             `        
@@ -116,4 +102,46 @@ function makeOptions(options){
 function makeButtons(data){
     menu.innerHTML = makeOptions(data.paths[pathIndex].options);
     buttonClick(data);
+}
+
+function changeKanata(kanataImg){
+    let kanataClasses = ["space"];
+    kanata.classList.remove('open');
+    kanata.classList.remove('right');
+
+    switch (kanataImg){
+        case "center-open":
+            kanataClasses = ["open"];
+            break;
+        case "right-open":
+            kanataClasses = ["right", "open"];
+            break;
+        case "right-close":
+            kanataClasses = ["right"];
+            break;
+    }
+    kanata.classList.add(...kanataClasses);
+}
+
+function changeRyhes(ryhesImg){
+    let ryhesClasses = ["space"];
+    ryhes.classList.remove('open');
+    ryhes.classList.remove('left');
+    ryhes.classList.remove('surprised');
+
+    switch (ryhesImg){
+        case "open":
+            ryhesClasses = ["open"];
+            break;
+        case "left-close":
+            ryhesClasses = ["left"];
+            break;
+        case "left-open":
+            ryhesClasses = ["left", "open"];
+            break;
+        case "left-surprised":
+            ryhesClasses = ["left", "surprised"];
+            break;
+    }
+    ryhes.classList.add(...ryhesClasses);
 }

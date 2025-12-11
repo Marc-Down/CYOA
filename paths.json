@@ -56,12 +56,12 @@
                 {
                     "text": "<span class=\"ryhes-text\">\"Hey!\"</span> He calls out to get Kanata's attention, <span class=\"ryhes-text\">\"What's this?\"</span>",
                     "kanataImg": "right-close",
-                    "ryhesImg": "open"
+                    "ryhesImg": "left-open"
                 },
                 {
                     "text": "Kanata looked over and saw that Rhyes' was pointing a small scuplture of a cat on a shelf",
                     "kanataImg": "right-close",
-                    "ryhesImg": "close"
+                    "ryhesImg": "left-close"
                 },
                 {
                     "text": "Does he answer Rhyes?",
@@ -102,12 +102,12 @@
                 {
                     "text": "The ghost jumped at the sound of Kanata's voice, having not expected an answer.",
                     "kanataImg": "right-close",
-                    "ryhesImg": "close"
+                    "ryhesImg": "left-surprised"
                 },
                 {
                     "text": "He smiled and continued his idle chatter and asking more quetions, not caring if he got an answer or not.",
                     "kanataImg":"close",
-                    "ryhesImg":"close"
+                    "ryhesImg":"left-close"
                 },
                 {
                     "text": "During this, Kanata cought a mention of wanting to go to the forest nearby. Something about animals and plants",
@@ -153,7 +153,7 @@
                 {
                     "text": "He does ask about other things on the shelves but Kanata don't answer him.",
                     "kanataImg": "close",
-                    "ryhesImg": "close"
+                    "ryhesImg": "open"
                 },
                 {
                     "text": "Does Kanata go to the forest for a walk or to the market for food?",
@@ -194,7 +194,7 @@
                 {
                     "text": "Rhyes smiles at him, and Kanata notices that the ghost seems to bounce as he 'walks' with him.",
                     "kanataImg": "close",
-                    "ryhesImg": "close"
+                    "ryhesImg": "left-close"
                 },
                 {
                     "text": "The ghost moves along the trail in a zig-zag manner, looking at the different plants along the forest floor.",
