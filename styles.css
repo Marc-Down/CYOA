@@ -65,7 +65,8 @@ html, body{
 #center, #protag, #other{
     background-image: url(images/Game_BG_Kitchen.png);
     background-attachment: fixed;
-    background-size: contain;
+    background-size: 100%;
+    background-position: 50% -200px;
 }
 
 #center.kitchen, #protag.kitchen, #other.kitchen{
@@ -90,6 +91,7 @@ html, body{
     background-repeat: no-repeat;
 }
 
+
 #Kanata.open{
     background-image: url(images/Kanata_Open_Temp.png);
 }
@@ -113,6 +115,46 @@ html, body{
     background-position-x: center;
     background-position-y: 100%;
     background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 780px){
+    #Kanata, #Ryhes{
+        background-size: 350px;
+    }
+    #center, #protag, #other{
+        background-size: 1100px;
+        background-position: 50% -200px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 780px){
+    #Kanata, #Ryhes{
+        background-size:340px;
+    }
+    #center, #protag, #other{
+        background-size: 620px;
+        background-position: 50% 0px;
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 768px){
+    #Kanata, #Ryhes{
+        background-size:350px;
+    }
+    #center, #protag, #other{
+        background-size: 620px;
+        background-position: 50% 0px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    #Kanata, #Ryhes{
+        background-size:330px;
+    }
+    #center, #protag, #other{
+        background-size: 620px;
+        background-position: 50% 0px;
+    }
 }
 
 #Ryhes.open{
